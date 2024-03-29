@@ -2,10 +2,6 @@ package personnages;
 
 public class Commercant extends Humain {
 
-	// attribut
-	String nom;
-	int argent;
-
 	// méthode
 	public void recevoirArgent(int don) {
 		gagnerArgent(don);
@@ -14,8 +10,8 @@ public class Commercant extends Humain {
 
 	public int seFaireExtorquer() {
 		parler("J'ai tout perdu! Ce monde est trop injuste!");
-		int temp = argent;
-		perteArgent(argent);
+		int temp = getArgent();
+		perteArgent(getArgent());
 		return temp;
 	}
 
