@@ -24,7 +24,12 @@ public class Humain {
 	}
 
 	public void direBonjour() {
-		parler("Bonjour je m'appelle " + nom + " et j'aime boire du " + boissonFavorite);
+		StringBuilder builder = new StringBuilder();
+		builder.append("Bonjour je m'appelle ");
+		builder.append(nom);
+		builder.append(" et j'aime boire du ");
+		builder.append(boissonFavorite);
+		parler(builder.toString());
 	}
 
 	public void boire() {
