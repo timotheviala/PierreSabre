@@ -27,8 +27,8 @@ public class Humain {
 		parler("Bonjour je m'appelle " + nom + " et j'aime boire du " + boissonFavorite);
 	}
 
-	public void boire(String boisson) {
-		parler("Mmmmmh un bon verre de " + boisson + "! GLOUPS!");
+	public void boire() {
+		parler("Mmmmmh un bon verre de " + boissonFavorite + "! GLOUPS!");
 	}
 
 	public void acheter(String bien, int prix) {
