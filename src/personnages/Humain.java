@@ -5,9 +5,9 @@ public class Humain {
 	private String nom;
 	private String boissonFavorite;
 	private int argent;
-	private Humain[] connaissances = new Humain[30];
+	protected Humain[] connaissances = new Humain[30];
 	private int maxConnaissances = 30;
-	private int nbConnaissances = 0;
+	protected int nbConnaissances = 0;
 
 	// méthode
 	public String getNom() {
@@ -20,6 +20,10 @@ public class Humain {
 
 	public int getArgent() {
 		return argent;
+	}
+
+	public int getNbConnaissances() {
+		return nbConnaissances;
 	}
 
 	public void parler(String texte) {
