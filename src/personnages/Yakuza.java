@@ -31,6 +31,18 @@ public class Yakuza extends Humain {
 				+ gain + " sous.");
 	}
 
+	@Override
+	public void direBonjour() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Bonjour je m'appelle ");
+		builder.append(getNom());
+		builder.append(" et j'aime boire du ");
+		builder.append(getBoissonFavorite());
+		parler(builder.toString());
+		parler("Mon clan est celui de " + clan);
+
+	}
+
 	public int getReputation() {
 		return reputation;
 	}
