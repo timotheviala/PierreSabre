@@ -12,9 +12,7 @@ public class Samouraï extends Ronin {
 	}
 
 	// methode
-
-	
-	@Override
+	@Override 
 	public void direBonjour() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("Bonjour je m'appelle ");

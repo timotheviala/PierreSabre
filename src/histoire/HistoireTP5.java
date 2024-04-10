@@ -32,7 +32,6 @@ public class HistoireTP5 {
 		masako.faireConnaissanceAvec(yaku);
 		masako.faireLeGentil();
 		masako.faireConnaissanceAvec(roro);
-
 	}
 
 }

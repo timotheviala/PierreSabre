@@ -18,6 +18,7 @@ public class Commercant extends Humain {
 	// constructeur
 	public Commercant(String nom, int argent) {
 		super(nom, "thé", argent);
+		direBonjour();
 	}
 
 }
