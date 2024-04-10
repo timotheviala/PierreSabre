@@ -22,7 +22,7 @@ public class Traitre extends Samouraï {
 			traitrise++;
 			parler("Si tu veux ma protection contre les yakuzas,il va falloir payer! Donne moi " + argentRanconner
 					+ " sous ou gare à toi!");
-			commercant.parler("Tout de suite grand " + getNom());
+			commercant.parler("Tout de suite grand " + getNom()+".");
 		} else {
 			parler("Mince je ne peux ranconner personne sinon un samouraï risque de me démasquer!");
 		}
@@ -37,6 +37,7 @@ public class Traitre extends Samouraï {
 		builder.append(" et j'aime boire du ");
 		builder.append(getBoissonFavorite());
 		parler(builder.toString());
+		parler("Je suis fier de servir le seigneur " + getSeigneur()+".");
 		parler("Mais je suis un traitre et mon niveau de traitrise est " + traitrise + ". Chut!");
 	}
 
@@ -46,6 +47,18 @@ public class Traitre extends Samouraï {
 		} else {
 			int indiceAmi = generateur.nextInt(getNbConnaissances());
 			Humain ami = connaissances[indiceAmi];
+			int don=getArgent()*1/20;
+			parler("Il faut absolument remonter ma cote de confiance. Je vais faire"
+					+ " ami ami avec "+ami.getNom()+".");
+			parler("Bonjour l'ami! Je voudrais vous aider en vous donnant "
+					+ don+" sous.");
+			ami.gagnerArgent(don);
+			perteArgent(don);
+			ami.parler("Merci "+ getNom()+" vous êtes quelqu'un de bien.");
+			if (traitrise>1) {
+				traitrise-=1;
+			}
+			
 
 		}
 	}

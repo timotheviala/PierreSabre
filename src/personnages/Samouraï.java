@@ -9,11 +9,11 @@ public class Samouraï extends Ronin {
 	public Samouraï(String seigneur, String nom, String boissonFavorite, int argent) {
 		super(nom, boissonFavorite, argent);
 		this.seigneur = seigneur;
-		parler("Je suis fier de servir le seigneur " + seigneur);
 	}
 
 	// methode
 
+	
 	@Override
 	public void direBonjour() {
 		StringBuilder builder = new StringBuilder();
@@ -22,6 +22,11 @@ public class Samouraï extends Ronin {
 		builder.append(" et j'aime boire du ");
 		builder.append(getBoissonFavorite());
 		parler(builder.toString());
+		parler("Je suis fier de servir le seigneur " + seigneur+".");
+	}
+
+	public String getSeigneur() {
+		return seigneur;
 	}
 
 	public void boire(String boisson) {
